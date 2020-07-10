@@ -40,9 +40,7 @@ The states which cause the episode to terminate are called the **terminal states
 
 Following is the formula for return at time t, expressed in terms of rewards at various time steps. Here T is the final time step and **Γ** is the discount rate such that 0 ≤ **Γ** ≤ 1
 
-![](https://cdn-images-1.medium.com/max/2594/1*D_d-3CmNEnKne9q-J3fQYw.png)
-
-![](/images/posts/2020-04-05-using-q-learning-in-numpy-to-teach-an-agent-to-play-a-game/media_01_header.png)
+![](/images/posts/2020-04-05-using-q-learning-in-numpy-to-teach-an-agent-to-play-a-game/media_02_return_discounted_formula.png)
 
 **Value function** are the functions of the states (or the state-action pairs) that estimate how good it is for the agent to be in a given state (or how good is it to perform a given action in a given state)
 
@@ -118,7 +116,7 @@ The agent then takes the action resulting in a change in it’s state in the gri
 
 We then compute the new q-value and update the q-table using the below mentioned formula.
 
-![](https://cdn-images-1.medium.com/max/2556/1*_M6HvopqYUBxjAEEE7ZK3Q.png)
+![](/images/posts/2020-04-05-using-q-learning-in-numpy-to-teach-an-agent-to-play-a-game/media_03_q_value_update_formula.png)
 
 For the purpose of displaying the grid-world and the guys, we make an empty canvas, resize it as per the **DISPLAY_SIZE** parameter and paste the images of the agent, beer bottle and virus at their respective current locations.
 
@@ -138,13 +136,13 @@ Finally we save the updated q-table.
 
 Following is the plot for the moving average of the rewards. It’s upward trend shows that the agent becomes smarter with more and more episodes of training.
 
-![Moving Average](https://cdn-images-1.medium.com/max/2000/1*M9Tdkis9-VoRNY_th4lucA.jpeg)*Moving Average*
+![Moving Average](/images/posts/2020-04-05-using-q-learning-in-numpy-to-teach-an-agent-to-play-a-game/media_04_result_moving_average.png)*Moving Average*
 
 And here are some GIFs that show how the agent gets smarter with every episode of training.
 
 Here is the thirsty agent looking for the bottle of beer with randomly initialized q-table. It means that the agent has no clue about the environment yet.
 
-![dumb agent wants beer but does not get it](https://cdn-images-1.medium.com/max/2000/1*V95r-iywnhAYgZ0Q7sn8PA.gif)*dumb agent wants beer but does not get it*
+![dumb agent wants beer but does not get it](/images/posts/2020-04-05-using-q-learning-in-numpy-to-teach-an-agent-to-play-a-game/media_04_result_moving_average.png)*dumb agent wants beer but does not get it*
 
 After some training, the agent does a relatively better job of making sequential decisions. He is not very fast yet but he ends up finding the beer eventually.
 
