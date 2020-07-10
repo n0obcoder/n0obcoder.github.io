@@ -66,19 +66,19 @@ We are going to learn how to implement q-learning now. This is going to be a fun
 
 We start by importing all the necessary libraries.
 
-<img src="https://medium.com/media/45789c147086fab08fa42262198febd1" frameborder=0></img>
+<script src="https://gist.github.com/n0obcoder/7370cab43b9ed42310abbe42b7230ac4.js"></script>
 
 Then we define all the hyperparameters of the q-learning algorithm and the display window.
 
-<img src="https://medium.com/media/15de8a03957bba8235a44efb33f621a9" frameborder=0></img>
+<script src="https://gist.github.com/n0obcoder/c1bce937f1b2103ce83379beb1b32541.js"></script>
 
 Next we define the path of the images for our agent, beer bottle (positive reward) and the virus (negative reward) and read them to be displayed on the screen. This is just to make the display window look interesting.
 
-<img src="https://medium.com/media/1164cdc40f351784ca251e3ba7082af8" frameborder=0></img>
+<script src="https://gist.github.com/n0obcoder/d82081d68f2dd97608f38af5e4d96fc5.js"></script>
 
 We need to make a class called **‘Blob’** which our agent, beer bottle and the virus would inherit. A Blob class object would have a spawning location (x and y coordinates) associated with it and it would be able to move diagonally depending on the input passed in it’s **‘move’** method. We would also be able to add to subtract two Blob objects. It would simple add or subtract the x and y coordinates of the two Blob objects.
 
-<iframe src="https://medium.com/media/a4987afd8c653d75e1bb35d228946e8f" frameborder=0></iframe>
+<script src="https://gist.github.com/n0obcoder/fa49ce1983f12a757be7754a0dc315f8.js"></script>
 
 Let’s define the q-table now, which will be used again and again to pick the best action under a given state. And we will constantly keep on updating this table to improve the decision making ability of our agent.
 
@@ -86,11 +86,11 @@ Note that the range here that we have taking for the state-space is **-SIZE+1 to
 
 Don’t wory about the update rule for updating the q-values in the q-table for now. We will talk about that in a while.
 
-<img src="https://medium.com/media/ecf36ce709deb216cabac1daa696dcb8" frameborder=0></img>
+<script src="https://gist.github.com/n0obcoder/f9cd091e3d0c675f2cc635fa6067fa1a.js"></script>
 
 In each episode, our agent, beer bottle and the virus need to be spawned at unique cell locations in the defined grid-world. But our Blob class simply spawns the guys at a random cell location in grid-world. This might lead to characters being spawned at the same location, which we do not want. So to take care of that we write a function which would take as input a list of tuples containing the coordinates of the guys already being spawned. This will ensure that any two of the guys, the agent, the beer bottle and the virus do not share their cell location.
 
-<img src="https://medium.com/media/cfc069bc4cec283eadb03f37090ce396" frameborder=0></img>
+<script src="https://gist.github.com/n0obcoder/98e4fa1b9839e7d1f3dd9552bc34576b.js"></script>
 
 With everything set up and defined, we start training the agent (updating the q-table).
 
@@ -122,15 +122,15 @@ For the purpose of displaying the grid-world and the guys, we make an empty canv
 
 At last we break the loop either if the agent gets his beer or if he gets infected by the virus.
 
-<img src="https://medium.com/media/caa047d0aabdccbb3e3b5b0792d015f4" frameborder=0></img>
+<script src="https://gist.github.com/n0obcoder/c45adc96cef181fbd9577eb587ab5d00.js"></script>
 
 We calculate the moving average and plot the rewards.
 
-<img src="https://medium.com/media/956783506c3f15aa478ff4f0b1cf81a5" frameborder=0></img>
+<script src="https://gist.github.com/n0obcoder/db9f5dc813bcef0a7f96acdad360c576.js"></script>
 
 Finally we save the updated q-table.
 
-<img src="https://medium.com/media/3227e819f19e1c2e18a8da18c5acad3b" frameborder=0></img>
+<script src="https://gist.github.com/n0obcoder/ea46bb01393d3e94f38455595b07aa9a.js"></script>
 
 ## Result
 
