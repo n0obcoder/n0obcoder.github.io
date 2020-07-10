@@ -242,4 +242,4 @@ Copyright (c) 2017 Oliver Nightingale.
 Lunr is distributed under the terms of the [MIT License](http://opensource.org/licenses/MIT).
 
 ## Reference
-https://www.youtube.com/watch?v=qWrcgHwSG8M
+[How to Setup GitHub Pages (2020) | Data Science Portfolio](https://www.youtube.com/watch?v=qWrcgHwSG8M)
