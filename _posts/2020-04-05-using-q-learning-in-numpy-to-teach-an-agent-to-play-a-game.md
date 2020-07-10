@@ -142,15 +142,15 @@ And here are some GIFs that show how the agent gets smarter with every episode o
 
 Here is the thirsty agent looking for the bottle of beer with randomly initialized q-table. It means that the agent has no clue about the environment yet.
 
-![dumb agent wants beer but does not get it](/images/posts/2020-04-05-using-q-learning-in-numpy-to-teach-an-agent-to-play-a-game/media_04_result_moving_average.png)*dumb agent wants beer but does not get it*
+![dumb agent wants beer but does not get it](/images/posts/2020-04-05-using-q-learning-in-numpy-to-teach-an-agent-to-play-a-game/media_05_agent_amateur_gif.gif)*dumb agent wants beer but does not get it*
 
 After some training, the agent does a relatively better job of making sequential decisions. He is not very fast yet but he ends up finding the beer eventually.
 
-![hmmm, that’s better](https://cdn-images-1.medium.com/max/2000/1*55txIxQuv8VTs-95JNnBhA.gif)*hmmm, that’s better*
+![hmmm, that’s better](/images/posts/2020-04-05-using-q-learning-in-numpy-to-teach-an-agent-to-play-a-game/media_06_agent_semipro_gif.gif)*hmmm, that’s better*
 
 Finally after thousands of episode of training, the agent gets really good at making sequential decisions and finds the beer in no time ! : D
 
-![now that’s a smart-ass agent there ! B)](https://cdn-images-1.medium.com/max/2000/1*xooExiFLqb-gig95j62IwA.gif)*now that’s a smart-ass agent there ! B)*
+![now that’s a smart-ass agent there ! B)](/images/posts/2020-04-05-using-q-learning-in-numpy-to-teach-an-agent-to-play-a-game/media_07_agent_pro_gif.gif)*now that’s a smart-ass agent there ! B)*
 
 ## Advantages of Q-Learning
 
