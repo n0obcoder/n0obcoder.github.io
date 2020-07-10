@@ -3,12 +3,10 @@ title: "Using Q-Learning in Numpy to teach an agent to play a game"
 date: 2020-04-05
 tags: [Reinforcement Learning, Q-Learning, Artificial Intelligence, Data Science]
 header:
-  image: https://miro.medium.com/max/1818/1*pvADcGrbHeiFJIHeTBDlUg.png
+  image: "/images/posts/2020-04-05-using-q-learning-in-numpy-to-teach-an-agent-to-play-a-game/media_01_header.png"
 excerpt: "Reinforcement Learning, Q-Learning, Artificial Intelligence, Data Science"
 mathjax: "true"
 ---
-
-<img src = "/images/posts/2020-04-05-using-q-learning-in-numpy-to-teach-an-agent-to-play-a-game/media_01_header.png">
 
 There are some Machine Learning models which can be trained to map any given input to a desired output based on the input-output pair used during training. By input-output pair, I obviously mean the input and it’s respective ground truth or labels. Such algorithms are called Supervised Learning algorithms. Classification and Regression are some of it’s examples.
 
