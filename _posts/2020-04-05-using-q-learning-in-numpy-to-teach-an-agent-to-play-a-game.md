@@ -42,7 +42,7 @@ Following is the formula for return at time t, expressed in terms of rewards at 
 
 ![](https://cdn-images-1.medium.com/max/2594/1*D_d-3CmNEnKne9q-J3fQYw.png)
 
-![]("/images/posts/2020-04-05-using-q-learning-in-numpy-to-teach-an-agent-to-play-a-game/media_01_header.png")
+![](/images/posts/2020-04-05-using-q-learning-in-numpy-to-teach-an-agent-to-play-a-game/media_01_header.png)
 
 **Value function** are the functions of the states (or the state-action pairs) that estimate how good it is for the agent to be in a given state (or how good is it to perform a given action in a given state)
 
