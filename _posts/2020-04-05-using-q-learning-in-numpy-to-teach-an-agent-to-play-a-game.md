@@ -11,6 +11,7 @@ mathjax: "true"
 
 {% gist 5555251 %}
 
+<script src="https://gist.github.com/n0obcoder/95213bdc99b3242be6e12ab3db1c1641.js"></script>
 
 There are some Machine Learning models which can be trained to map any given input to a desired output based on the input-output pair used during training. By input-output pair, I obviously mean the input and it’s respective ground truth or labels. Such algorithms are called Supervised Learning algorithms. Classification and Regression are some of it’s examples.
 
