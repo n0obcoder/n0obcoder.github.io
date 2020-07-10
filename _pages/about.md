@@ -1,6 +1,6 @@
 ---
 title: "About"
-permalink: /about/
+permalink: /
 header:
   image: "/images/header_style_transfer.jpg"
 ---
