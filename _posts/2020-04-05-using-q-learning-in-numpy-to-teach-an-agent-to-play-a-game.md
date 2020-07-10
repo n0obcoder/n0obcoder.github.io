@@ -38,9 +38,11 @@ The states which cause the episode to terminate are called the **terminal states
 
 **Return** is the cumulative sum of the future rewards. This might reach infinity in cases where there are no terminal states, also known as **Non-Episodic** tasks. To make it a finite sum, we discount the future rewards using a discounting factor called **gamma**.
 
-Following is the formula for return at time t, expressed in terms of rewards at various time steps. Here T is the final time step and **Γ **is the discount rate such that 0 ≤ **Γ** ≤ 1
+Following is the formula for return at time t, expressed in terms of rewards at various time steps. Here T is the final time step and **Γ** is the discount rate such that 0 ≤ **Γ** ≤ 1
 
 ![](https://cdn-images-1.medium.com/max/2594/1*D_d-3CmNEnKne9q-J3fQYw.png)
+
+![]("/images/posts/2020-04-05-using-q-learning-in-numpy-to-teach-an-agent-to-play-a-game/media_01_header.png")
 
 **Value function** are the functions of the states (or the state-action pairs) that estimate how good it is for the agent to be in a given state (or how good is it to perform a given action in a given state)
 
