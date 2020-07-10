@@ -1,5 +1,12 @@
-
-# Using Q-Learning in Numpy to teach an agent to play a game
+---
+title: "Using Q-Learning in Numpy to teach an agent to play a game"
+date: 2020-04-05
+tags: [Reinforcement Learning, Q-Learning, Artificial Intelligence, Data Science]
+header:
+  image: https://miro.medium.com/max/1818/1*pvADcGrbHeiFJIHeTBDlUg.png
+excerpt: "Reinforcement Learning, Q-Learning, Artificial Intelligence, Data Science"
+mathjax: "true"
+---
 
 
 
@@ -11,13 +18,13 @@ Then there is this third kind of machine learning paradigm, alongside supervised
 
 This basically involves making sequential decisions in an environment in order to maximize the cumulative future rewards. I will explain this in greater detail in a while.
 
-**Q**-**Learning **is one such model-free Reinforcement Learning algorithm that learns to make correct actions under various circumstances.
+**Q-Learning** is one such model-free Reinforcement Learning algorithm that learns to make correct actions under various circumstances.
 
 Let us first get familiar with the very basic terminologies of a Reinforcement Learning set-up.
 
 ## Let’s get familiar with some basic RL terminologies
 
-There is something called an **environment **that literally consists of everything that the system is made up of. It has an **agent **that observes the environment (takes inputs from the environment) and then takes **actions** based on the inputs, changing the **state **of the environment and collecting **rewards **in the process.
+There is something called an **environment** that literally consists of everything that the system is made up of. It has an **agent** that observes the environment (takes inputs from the environment) and then takes **actions** based on the inputs, changing the **state** of the environment and collecting **rewards** in the process.
 
 Do not worry if this does not make perfect sense to you yet !
 
@@ -31,19 +38,19 @@ The sequence of states, actions and rewards until it all ends (either by reachin
 
 The states which cause the episode to terminate are called the **terminal states**. In our example of the grid-world, the states in which the relative position of the agent either with respect to the beer bottle or the virus, becomes zero, are the terminal states.
 
-**Return** is the cumulative sum of the future rewards. This might reach infinity in cases where there are no terminal states, also known as **Non-Episodic **tasks. To make it a finite sum, we discount the future rewards using a discounting factor called **gamma**.
+**Return** is the cumulative sum of the future rewards. This might reach infinity in cases where there are no terminal states, also known as **Non-Episodic** tasks. To make it a finite sum, we discount the future rewards using a discounting factor called **gamma**.
 
-Following is the formula for return at time t, expressed in terms of rewards at various time steps. Here T is the final time step and **Γ **is the discount rate such that 0 ≤ **Γ **≤ 1
+Following is the formula for return at time t, expressed in terms of rewards at various time steps. Here T is the final time step and **Γ **is the discount rate such that 0 ≤ **Γ** ≤ 1
 
 ![](https://cdn-images-1.medium.com/max/2594/1*D_d-3CmNEnKne9q-J3fQYw.png)
 
-**Value function **are the functions of the states (or the state-action pairs) that estimate how good it is for the agent to be in a given state (or how good is it to perform a given action in a given state)
+**Value function** are the functions of the states (or the state-action pairs) that estimate how good it is for the agent to be in a given state (or how good is it to perform a given action in a given state)
 
 Value functions are always defined with respect to particular ways of acting, called policies.
 
-A **policy **is nothing but a mapping from states to probabilities of selecting each possible action.
+A **policy** is nothing but a mapping from states to probabilities of selecting each possible action.
 
-I would like to talk more about the **state-action value function **because we are going to make use of it in the rest of the blog.
+I would like to talk more about the **state-action value function** because we are going to make use of it in the rest of the blog.
 
 So as mentioned earlier, a state-action function is a function that returns the expected return starting from a state ‘s’, taking action ‘a’ and thereafter following the policy **π**.
 
@@ -61,15 +68,15 @@ We are going to learn how to implement q-learning now. This is going to be a fun
 
 We start by importing all the necessary libraries.
 
-<iframe src="https://medium.com/media/45789c147086fab08fa42262198febd1" frameborder=0></iframe>
+<img src="https://medium.com/media/45789c147086fab08fa42262198febd1" frameborder=0></img>
 
 Then we define all the hyperparameters of the q-learning algorithm and the display window.
 
-<iframe src="https://medium.com/media/15de8a03957bba8235a44efb33f621a9" frameborder=0></iframe>
+<img src="https://medium.com/media/15de8a03957bba8235a44efb33f621a9" frameborder=0></img>
 
 Next we define the path of the images for our agent, beer bottle (positive reward) and the virus (negative reward) and read them to be displayed on the screen. This is just to make the display window look interesting.
 
-<iframe src="https://medium.com/media/1164cdc40f351784ca251e3ba7082af8" frameborder=0></iframe>
+<img src="https://medium.com/media/1164cdc40f351784ca251e3ba7082af8" frameborder=0></img>
 
 We need to make a class called **‘Blob’** which our agent, beer bottle and the virus would inherit. A Blob class object would have a spawning location (x and y coordinates) associated with it and it would be able to move diagonally depending on the input passed in it’s **‘move’** method. We would also be able to add to subtract two Blob objects. It would simple add or subtract the x and y coordinates of the two Blob objects.
 
@@ -81,11 +88,11 @@ Note that the range here that we have taking for the state-space is **-SIZE+1 to
 
 Don’t wory about the update rule for updating the q-values in the q-table for now. We will talk about that in a while.
 
-<iframe src="https://medium.com/media/ecf36ce709deb216cabac1daa696dcb8" frameborder=0></iframe>
+<img src="https://medium.com/media/ecf36ce709deb216cabac1daa696dcb8" frameborder=0></img>
 
 In each episode, our agent, beer bottle and the virus need to be spawned at unique cell locations in the defined grid-world. But our Blob class simply spawns the guys at a random cell location in grid-world. This might lead to characters being spawned at the same location, which we do not want. So to take care of that we write a function which would take as input a list of tuples containing the coordinates of the guys already being spawned. This will ensure that any two of the guys, the agent, the beer bottle and the virus do not share their cell location.
 
-<iframe src="https://medium.com/media/cfc069bc4cec283eadb03f37090ce396" frameborder=0></iframe>
+<img src="https://medium.com/media/cfc069bc4cec283eadb03f37090ce396" frameborder=0></img>
 
 With everything set up and defined, we start training the agent (updating the q-table).
 
@@ -93,9 +100,9 @@ This is where the magic happens.
 
 Let’s understand it line by line. So we start off with a loop which would run for the defined number of episodes.
 
-We initialize the player, beer and virus objects using the **get_unique_spawning_location **function and the **Blob **class that we have already defined earlier.
+We initialize the player, beer and virus objects using the **get_unique_spawning_location** function and the **Blob** class that we have already defined earlier.
 
-Then we make use of the **SHOW_EVERY **parameter to print the current value of epsilon, the mean reward so far (this is supposed to increase with training) and the display parameter **‘show’** that is used to display the grid-world in action.
+Then we make use of the **SHOW_EVERY** parameter to print the current value of epsilon, the mean reward so far (this is supposed to increase with training) and the display parameter **‘show’** that is used to display the grid-world in action.
 
 Next we initialize the** ‘episode_reward’** to 0 and the agent starts taking actions for 200 timesteps.
 
@@ -103,7 +110,7 @@ For every timestep, we need the state of the environment, which we have defined 
 
 Then agent would need to take an action, which again would depend on the curent value of epsilon. We sample a random number from a uniform distribution and compare it with the current value of epsilion. If the random value is greater than the current value of epsilon, the agent uses the q-table and picks the action that has the maximun q-value in the q-tablle. Else the agent takes a random action.
 
-The first case where the agent makes use of the q-table to pick the action with highest q-value is referred to as **Exploitation **whereas the second case where the agent takes a random action is referred as **Exploration**. The parameter epsilon takes care of the **Exploitaion-Exploration tradeoff**.
+The first case where the agent makes use of the q-table to pick the action with highest q-value is referred to as **Exploitation** whereas the second case where the agent takes a random action is referred as **Exploration**. The parameter epsilon takes care of the **Exploitaion-Exploration tradeoff**.
 
 We then check if the agent has reached to the beer bottle or if it has been infected by the virus. We define the reward of the current timestep accordingly.
 
@@ -113,19 +120,19 @@ We then compute the new q-value and update the q-table using the below mentioned
 
 ![](https://cdn-images-1.medium.com/max/2556/1*_M6HvopqYUBxjAEEE7ZK3Q.png)
 
-For the purpose of displaying the grid-world and the guys, we make an empty canvas, resize it as per the **DISPLAY_SIZE **parameter and paste the images of the agent, beer bottle and virus at their respective current locations.
+For the purpose of displaying the grid-world and the guys, we make an empty canvas, resize it as per the **DISPLAY_SIZE** parameter and paste the images of the agent, beer bottle and virus at their respective current locations.
 
 At last we break the loop either if the agent gets his beer or if he gets infected by the virus.
 
-<iframe src="https://medium.com/media/caa047d0aabdccbb3e3b5b0792d015f4" frameborder=0></iframe>
+<img src="https://medium.com/media/caa047d0aabdccbb3e3b5b0792d015f4" frameborder=0></img>
 
 We calculate the moving average and plot the rewards.
 
-<iframe src="https://medium.com/media/956783506c3f15aa478ff4f0b1cf81a5" frameborder=0></iframe>
+<img src="https://medium.com/media/956783506c3f15aa478ff4f0b1cf81a5" frameborder=0></img>
 
 Finally we save the updated q-table.
 
-<iframe src="https://medium.com/media/3227e819f19e1c2e18a8da18c5acad3b" frameborder=0></iframe>
+<img src="https://medium.com/media/3227e819f19e1c2e18a8da18c5acad3b" frameborder=0></img>
 
 ## Result
 
@@ -157,7 +164,7 @@ Q-Learning involves look-ups from the q-table. And the q-table is made up of val
 
 ## Code
 
-You can find the code for this q-learning project on my GitHub account by clicking on this link [**https://github.com/n0obcoder/Q-Learning](https://github.com/n0obcoder/Q-Learning)**
+You can find the code for this q-learning project on my GitHub account by clicking on this link **[https://github.com/n0obcoder/Q-Learning](https://github.com/n0obcoder/Q-Learning)**
 
 ## References
 
