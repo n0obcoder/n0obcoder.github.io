@@ -9,6 +9,9 @@ mathjax: "true"
 ---
 
 
+{% gist 5555251 %}
+
+
 There are some Machine Learning models which can be trained to map any given input to a desired output based on the input-output pair used during training. By input-output pair, I obviously mean the input and it’s respective ground truth or labels. Such algorithms are called Supervised Learning algorithms. Classification and Regression are some of it’s examples.
 
 Also, there exists a class of machine learning models that look for underlying patterns in the data, without requiring the knowledge of the labels explicitly. These algorithms are called Unsupervised Learning algorithms. Clustering and Density Estimation are some of it’s examples.
