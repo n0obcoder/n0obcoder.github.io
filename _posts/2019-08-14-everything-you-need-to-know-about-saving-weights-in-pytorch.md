@@ -3,7 +3,7 @@ title: "Everything You Need To Know About Saving Weights In PyTorch"
 date: 2019-08-14
 tags: [PyTorch, Python, Neural Networks, Artificial Intelligence, Data Science]
 header:
-  image: "/images/posts/2019-08-14-everything-you-need-to-know-about-saving-weights-in-pytorch/media_01_header.jpeg"
+  image: "/images/posts/2019-08-14-everything-you-need-to-know-about-saving-weights-in-pytorch/media_01_header.jpg"
 excerpt: "PyTorch, Python, Neural Networks, Artificial Intelligence, Data Science"
 mathjax: "true"
 ---
