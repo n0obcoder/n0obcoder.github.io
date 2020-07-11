@@ -1,7 +1,12 @@
-
-# Everything You Need To Know About Saving Weights In PyTorch
-
-
+---
+title: "Everything You Need To Know About Saving Weights In PyTorch"
+date: 2019-08-14
+tags: [PyTorch, Python, Neural Networks, Artificial Intelligence, Data Science]
+header:
+  image: "/images/posts/2019-08-14-everything-you-need-to-know-about-saving-weights-in-pytorch/media_01_header.jpeg"
+excerpt: "PyTorch, Python, Neural Networks, Artificial Intelligence, Data Science"
+mathjax: "true"
+---
 
 What do we Deep Learning practitioners do once we are done with training our models ?
 
