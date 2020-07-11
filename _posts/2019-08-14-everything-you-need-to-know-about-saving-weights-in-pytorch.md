@@ -30,15 +30,15 @@ Let’s get started !!!
 
 We start off by importing the [*bare necessities](https://www.youtube.com/watch?v=5dhSdnDb3tk)* of coding using PyTorch.
 
-<iframe src="https://medium.com/media/2b06f4ea6dc8d765e988947139cd2a39" frameborder=0></iframe>
+<script src="https://gist.github.com/n0obcoder/3a093926545de23d6ce78146ab40a23d.js"></script>
 
 Next, we define a CNN based model.
 
-<iframe src="https://medium.com/media/0054cff18e6ac2c15f28027973559a8a" frameborder=0></iframe>
+<script src="https://gist.github.com/n0obcoder/3ba47013e21ce4628cb6f6220d30880f.js"></script>
 
 Let’s initialize and print *model* and see what’s inside it.
 
-<iframe src="https://medium.com/media/8d64d32b3cb628ecdff45d4466e65f1f" frameborder=0></iframe>
+<script src="https://gist.github.com/n0obcoder/c554a53027732aa5799a5aa1c4660144.js"></script>
 
 Printing the *model* shows you it’s architecture. But we are going to dive deeper, for we are the Deep Learning practitioners!
 
@@ -48,7 +48,7 @@ There is a way to access each and every learnable Parameter of a model along wit
 
 Back to printing all the parameters of the model.
 
-<iframe src="https://medium.com/media/3ca6cc0677bf2f7d452dfe1dc438b84b" frameborder=0></iframe>
+<script src="https://gist.github.com/n0obcoder/e988501a9e3b0a234d07f0f71abd6956.js"></script>
 
 Wooouhooouhooou ! So what did just happen here ?
 
@@ -62,11 +62,11 @@ Now we will try to freeze all but the last layer of the model. If we go through 
 
 So let’s freeze all the parameters except the ones with their names *‘fc.weight’* or *‘fc.bias’*
 
-<iframe src="https://medium.com/media/691f3137240cee571a13b0ed027ec865" frameborder=0></iframe>
+<script src="https://gist.github.com/n0obcoder/9b70c73065734d4ee189ea15e82a3fbd.js"></script>
 
 We can verify that the desired changes have been made successfully by printing out the *requires_grad* for all the parameters of the model
 
-<iframe src="https://medium.com/media/9b5adcb83f98b727a92c73c5b8cd6271" frameborder=0></iframe>
+<script src="https://gist.github.com/n0obcoder/4e9a2a436f03cdc827788afb5da1a7c2.js"></script>
 
 We can see that the desired changes have been made successfully !
 
@@ -84,7 +84,7 @@ It saves the entire model (the **architecture as well as the weights**)
 
 We will first see how to write the syntax for *state_dict*. It’s pretty easy.
 
-<iframe src="https://medium.com/media/a813ddbceec4fc3eff8b14368758ed97" frameborder=0></iframe>
+<script src="https://gist.github.com/n0obcoder/de97028a3fa48cd1aaf1c33d1a145750.js"></script>
 
 Its just a python’s ordered dictionary.
 
@@ -94,15 +94,15 @@ I guess it’s a good time to divert a little from the topic.
 
 See, printing *help(model)* tells us that model is an instance of *nn.Module*
 
-<iframe src="https://medium.com/media/b29606a9ac22789d94ad0882f527920a" frameborder=0></iframe>
+<script src="https://gist.github.com/n0obcoder/a8024ac9e796c9dffd3cc7386493ce5f.js"></script>
 
 It could also be verified by using python’s isinstance function
 
-<iframe src="https://medium.com/media/28cb497a2fbda11008222f75dc418d97" frameborder=0></iframe>
+<script src="https://gist.github.com/n0obcoder/c9adc94c50ae858643e1fabde1af39c3.js"></script>
 
 Is *model.fc* also an instance of *nn.Module* ?
 
-<iframe src="https://medium.com/media/1fe917162a5a38b4cf8d26ca11e5662c" frameborder=0></iframe>
+<script src="https://gist.github.com/n0obcoder/13a4f4398eb0737053778a7803c5dbfd.js"></script>
 
 Apparently yes !
 
@@ -110,7 +110,7 @@ But what exactly is *fc***, **and where does it come form ?
 
 We can see what all *nn.Module* objects lie under the model
 
-<iframe src="https://medium.com/media/0d90bd173e6c5f337cec2fcb7a9876c2" frameborder=0></iframe>
+<script src="https://gist.github.com/n0obcoder/4ffcdbbce2434574d88ef7cd875091f7.js"></script>
 
 The *named_children()* applied on any *nn.Module* object returns all it’s immediate children (also *nn.Module* objects). Looking at the results of the above written piece of code, we know that *‘sequential’, ‘layer1’, ‘layer2’,* and *‘fc’* are all the children of model and all of these are *nn.Module* class objects. Now we all know where *‘fc’* is coming from.
 
@@ -118,7 +118,7 @@ And you know what ? *state_dict()* works on any *nn.Module* object and returns a
 
 So let’s try the *state_dict()* function on the *‘fc’* layer of the model.
 
-<iframe src="https://medium.com/media/0392daec174810f755506a5b0cc4122c" frameborder=0></iframe>
+<script src="https://gist.github.com/n0obcoder/9baa58eed9aa6325ace326fe6bcf0b85.js"></script>
 
 Remember that *model.fc.state_dict()* or any *nnModule.state_dict()* is an **ordered dictionary**. So iterating over it gives us the keys of the dictionary which can be used to access the parameter tensor which, by the way, is not a *nn.Module* object, but a simple *torch.Tensor* with a *shape* and *requires_grad* attribute.
 
@@ -126,17 +126,17 @@ So it must be noted that when we save the *state_dict()* of a *nn.Module* object
 
 This is how we save the *state_dict* of the entire model.
 
-<iframe src="https://medium.com/media/47c9a09fba37dbde4d642089e05a3c5e" frameborder=0></iframe>
+<script src="https://gist.github.com/n0obcoder/60d23fbf4994d093a8cc1e37b242cede.js"></script>
 
 This makes a *‘weights_only.pth’* file in the working directory and it holds, in an ordered dictionary, the *torch.Tensor* objects of all the layers of the model.
 
 We will try to load the saved weights now. But before we do that, we need to define the model architecture first. It makes sense to define the model first and then to load the weights in it because the saved information is **just** the weights and **not** the model architecture.
 
-<iframe src="https://medium.com/media/87c522f9d08690269eef40ad75403886" frameborder=0></iframe>
+<script src="https://gist.github.com/n0obcoder/87d008fb5e7747fc380ffe2fa389b7d5.js"></script>
 
 Once the weights are loaded in the defined model, let’s check the *requires_grad* attribute of all the layers of model_new.
 
-<iframe src="https://medium.com/media/05a747cf8ad24ad5f9329a47b9482ffd" frameborder=0></iframe>
+<script src="https://gist.github.com/n0obcoder/ac9e3b97226669d139ef0614102f3c86.js"></script>
 
 Wait ! What ?
 
@@ -152,17 +152,17 @@ Yes we have this second way of saving things, in which we can save the entire mo
 
 So we will resume from the point where we had frozen all but the last layer (the *‘fc’* layer) of the model and save the entire model.
 
-<iframe src="https://medium.com/media/b8eb06ecc2e957ab971b57ddab09b925" frameborder=0></iframe>
+<script src="https://gist.github.com/n0obcoder/f585f87eb78a7db208b9218d7bc8e706.js"></script>
 
 This makes a *‘entire_model.pth’* file in the working directory and it contains the model architecture **as well as** the saved weights.
 
 We will try to load the saved model now. And this time, we do not need to define the model architecture as the information about the model architecture is already stored in the saved file.
 
-<iframe src="https://medium.com/media/63be818266fd50015de780adc7968e17" frameborder=0></iframe>
+<script src="https://gist.github.com/n0obcoder/f539676873bab027449367b559edb8a1.js"></script>
 
 Once the model is loaded, let’s check the *requires_grad* attribute of all the layers of model_new.
 
-<iframe src="https://medium.com/media/c0a22484ed073418e483ac46b7c34f0d" frameborder=0></iframe>
+<script src="https://gist.github.com/n0obcoder/31a23a8cd2db69148f8a938607684cd3.js"></script>
 
 That is exactly what we wanted to see, isn’t it ? :D
 
@@ -177,27 +177,27 @@ We learnt a lot of things in this blog.
 1. Applying ***named_parameters()*** on an *nn.Module* object e.g. *model* or 
 *model.layer2* or *model.fc* returns all the names and the respective parameters. These parameters are *nn.Parameter* (subclass of *torch.Tensor*) objects and therefore they have *shape* and *requires_grad* attributes.
 
-<iframe src="https://medium.com/media/7a4b1f7ca69e4047f40f726d79353fdd" frameborder=0></iframe>
+<script src="https://gist.github.com/n0obcoder/ac7ad1c38d372389be88c32120997171.js"></script>
 
 2. The ***requires_grad*** attribute of a *nn.Parameter* object (learnable parameter object) decides whether to train or freeze a particular parameter. For example, if we want to freeze the *layer1* of the model, we would use the following code.
 
-<iframe src="https://medium.com/media/a6489116e1a35dabe15ef18eed67ccc6" frameborder=0></iframe>
+<script src="https://gist.github.com/n0obcoder/07a47b4bffe723b7784e43209e8893af.js"></script>
 
 3. Applying ***named_children()*** on any *nn.Module* object returns all it’s immediate children (also *nn.Module* objects).
 
-<iframe src="https://medium.com/media/88afcdc68d7d94b02dd1fa1f312d9a91" frameborder=0></iframe>
+<script src="https://gist.github.com/n0obcoder/37873ede4f6b129cc502dd55be4e4976.js"></script>
 
 4. A ***state_dict()*** of any *nn.Module* object e.g. *model* or *model.layer2* or *model.fc* is simply a python **ordered dictionary** object that maps each parameter to its parameter tensor (*torch.Tensor* object). The **keys** of this ordered dictionary are the names of the parameters, which can be used to access the respective parameter tensors.
 
-<iframe src="https://medium.com/media/6f3aee709782b0dcf632435db16747ff" frameborder=0></iframe>
+<script src="https://gist.github.com/n0obcoder/bc4f01784f657b53f84be8c654715ebf.js"></script>
 
 5. Saving a *nn.Module* object’s *state_dict* only **saves the** **weights** of the various parameters of that object and **not the model architecture**. Neither does it involve the **requires_grad** attribute of the weights. So before loading the *state_dict*, one must define the model first.
 
-<iframe src="https://medium.com/media/e19837404cf182ce6cfac8220b003224" frameborder=0></iframe>
+<script src="https://gist.github.com/n0obcoder/1c2137b473e8d6623ca3660038db4ae9.js"></script>
 
 6. Entire model (*nn.Module* object) can also be saved which would include the **model architecture as well as its weights**. Since we are saving the *nn.Module* object, the **requires_grad** attribute is also **saved** this way. Also we don’t need to define the model architecture before loading the saved file since the saved file already has the model architecture saved in it.
 
-<iframe src="https://medium.com/media/83d5b2ed9dea3d09a3a9d38eb3d02d98" frameborder=0></iframe>
+<script src="https://gist.github.com/n0obcoder/e8677e884d282c45754e028f6676187e.js"></script>
 
 7. Saving the *state_dict* can be used to only save the weights of the model. It doesn’t save the *required_grad* flag, whereas saving the entire model does save the model architecture, it’s weights and the *requires_grad* attributes of all its parameters.
 
