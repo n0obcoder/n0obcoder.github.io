@@ -5,7 +5,8 @@ permalink: /experience/
 
 <br>
 
-# Wynk Limited testing
+# Wynk Limited 
+<hr/>
 **Machine Learning Engineer** <br>
 **08/2020 - present | Gurgaon, India** <br>
 
@@ -21,6 +22,7 @@ permalink: /experience/
 
 
 # UnitedHealth Group
+<hr/>
 **Data Scientist** <br>
 **04/2019 – present | Gurgaon, India** <br>
 
@@ -35,6 +37,7 @@ permalink: /experience/
 + Noise Removal using UNet-based Denoising AutoEncoder Printed Text Recognition
 
 # Tata Consultancy Services
+<hr/>
 **Developer** <br>
 **11/2017 – 03/2019 | Gurgaon, India** <br>
 
@@ -47,7 +50,7 @@ Worked on an Industrial Document Analysis project in Innovation Labs, TCS where 
 + Text Recognition using CNN and Capsule Networks 
 
 # Tata Consultancy Services
-
+<hr/>
 **Assistant Systems Engineer** <br>
 **03/2017 – 10/2017 | Gurgaon, India** <br>
 
