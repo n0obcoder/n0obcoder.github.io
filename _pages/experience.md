@@ -6,7 +6,7 @@ permalink: /experience/
 <br>
 
 # Wynk Limited 
-<hr/>
+
 **Machine Learning Engineer** <br>
 **08/2020 - present | Gurgaon, India** <br>
 
@@ -19,7 +19,7 @@ permalink: /experience/
 + Built a PySpark-based pipeline for preprocessing the data required for generating personalized playlists recommendations.
 + Developed a methodology that takes in the precomputed embeddings of users and songs as inputs and generates 20 personalized playlists recommendations for every user such that all the recommended playlists are aligned with the user's taste, and there exists diversity in playlists languages.
 
-
+<hr/>
 
 # UnitedHealth Group
 <hr/>
@@ -36,6 +36,8 @@ permalink: /experience/
 + Extracted text using Multi-Scale Template Match Algorithm
 + Noise Removal using UNet-based Denoising AutoEncoder Printed Text Recognition
 
+<hr/>
+
 # Tata Consultancy Services
 <hr/>
 **Developer** <br>
@@ -48,6 +50,8 @@ Worked on an Industrial Document Analysis project in Innovation Labs, TCS where 
 + Noise removal using Fully Connected Network 
 + Segmentation of the individual characters from the extracted text patches using Connected Components Algorithm 
 + Text Recognition using CNN and Capsule Networks 
+
+<hr/>
 
 # Tata Consultancy Services
 <hr/>
