@@ -22,7 +22,7 @@ permalink: /experience/
 <hr/>
 
 # UnitedHealth Group
-<hr/>
+
 **Data Scientist** <br>
 **04/2019 – present | Gurgaon, India** <br>
 
@@ -39,7 +39,7 @@ permalink: /experience/
 <hr/>
 
 # Tata Consultancy Services
-<hr/>
+
 **Developer** <br>
 **11/2017 – 03/2019 | Gurgaon, India** <br>
 
@@ -54,7 +54,7 @@ Worked on an Industrial Document Analysis project in Innovation Labs, TCS where 
 <hr/>
 
 # Tata Consultancy Services
-<hr/>
+
 **Assistant Systems Engineer** <br>
 **03/2017 – 10/2017 | Gurgaon, India** <br>
 
